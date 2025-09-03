@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: notes-app-backend
+    env: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: free
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+      - key: DATABASE_PASSWORD
+        generateValue: true
+      - key: FRONTEND_URL
+        value: https://notes-app-frontend.onrender.com
+    healthCheckPath: /api/notes
+
+  - type: web
+    name: notes-app-frontend
+    env: docker
+    dockerfilePath: ./frontend/Dockerfile
+    dockerContext: ./frontend
+    plan: free
+    envVars:
+      - key: REACT_APP_API_URL
+        value: https://notes-app-backend.onrender.com

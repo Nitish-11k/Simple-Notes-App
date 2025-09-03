@@ -1,0 +1,7 @@
+/home/nickx/Documents/Assingment/Note app/backend/src/main/java/com/example/notesapp/NotesAppApplication.java
+/home/nickx/Documents/Assingment/Note app/backend/src/main/java/com/example/notesapp/repository/NoteRepository.java
+/home/nickx/Documents/Assingment/Note app/backend/src/main/java/com/example/notesapp/model/Note.java
+/home/nickx/Documents/Assingment/Note app/backend/src/main/java/com/example/notesapp/model/ShareNote.java
+/home/nickx/Documents/Assingment/Note app/backend/src/main/java/com/example/notesapp/repository/ShareNoteRepository.java
+/home/nickx/Documents/Assingment/Note app/backend/src/main/java/com/example/notesapp/controller/ShareController.java
+/home/nickx/Documents/Assingment/Note app/backend/src/main/java/com/example/notesapp/controller/NoteController.java
