@@ -32,15 +32,7 @@ const SharedNote = () => {
     fetchSharedNote();
   }, [fetchSharedNote]);
 
-  const formatDate = (dateString) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit'
-    });
-  };
+
 
   if (loading) {
     return (
@@ -90,20 +82,7 @@ const SharedNote = () => {
           {note.content || 'No content available'}
         </div>
 
-        <div className="card-meta" style={{ 
-          borderTop: '2px solid #eee', 
-          paddingTop: '1rem',
-          fontSize: '0.9rem'
-        }}>
-          <div>
-            <strong>Created:</strong> {formatDate(note.createdAt)}
-          </div>
-          {note.updatedAt !== note.createdAt && (
-            <div>
-              <strong>Last Updated:</strong> {formatDate(note.updatedAt)}
-            </div>
-          )}
-        </div>
+
       </div>
 
       <div style={{ textAlign: 'center', marginTop: '2rem' }}>
