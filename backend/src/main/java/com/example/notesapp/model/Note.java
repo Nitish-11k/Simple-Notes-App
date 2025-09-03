@@ -40,8 +40,6 @@ public class Note {
     public Note(String title, String content) {
         this.title = title;
         this.content = content;
-        this.createdAt = LocalDateTime.now();
-        this.updatedAt = LocalDateTime.now();
     }
     public Long getId() {
         return id;
@@ -57,7 +55,6 @@ public class Note {
     
     public void setTitle(String title) {
         this.title = title;
-        this.updatedAt = LocalDateTime.now();
     }
     
     public String getContent() {
@@ -66,7 +63,6 @@ public class Note {
     
     public void setContent(String content) {
         this.content = content;
-        this.updatedAt = LocalDateTime.now();
     }
     
     public LocalDateTime getCreatedAt() {
