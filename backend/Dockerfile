@@ -1,4 +1,4 @@
-FROM maven:3.8.6-openjdk-11 AS build
+FROM maven:3.9.6-openjdk-17 AS build
 
 WORKDIR /app
 
@@ -8,7 +8,7 @@ RUN mvn dependency:go-offline -B
 COPY src ./src
 RUN mvn clean package -DskipTests
 
-FROM openjdk:11-jre
+FROM openjdk:17-jre
 
 WORKDIR /app
 
